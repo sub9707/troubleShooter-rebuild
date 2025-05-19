@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +16,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        <div className="w-full h-screen flex justify-center items-center bg-purple-950 relative overflow-hidden">
+          {/* 종이 겹침 배경 */}
+          <div className="absolute top-1/2 left-1/2 w-[calc(100%-2rem)] max-w-[1440px] h-[110%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+            <div className="absolute inset-0 bg-white shadow-lg shadow-gray-600 rotate-[-1deg] -z-10" />
+            <div className="absolute inset-0 bg-white shadow-lg shadow-gray-600 rotate-[-1.8deg] -z-20" />
+            <div className="absolute inset-0 bg-white shadow-lg shadow-gray-600 rotate-[1deg] -z-20" />
+            <div className="absolute inset-0 bg-white shadow-lg shadow-gray-600 rotate-[1.8deg] -z-30" />
+          </div>
+
+          {/* 메인 콘텐츠 */}
+          <div className="w-full max-w-[1440px] px-4 bg-gray-100 shadow-lg shadow-gray-600 relative z-10">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
