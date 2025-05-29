@@ -49,8 +49,15 @@ function RecentPosts() {
             >
                 {Array.from({ length: 9 }, (_, i) => (
                     <SwiperSlide key={i}>
-                        <div className="bg-white rounded-2xl shadow-md p-6 h-60 flex items-center justify-center text-center select-none cursor-pointer">
-                            Slide {i + 1}
+                        <div className="bg-white rounded-2xl shadow-md p-8 h-60 flex flex-col items-center justify-center text-center select-none cursor-pointer">
+                            <h3 className='text-xl font-bold text-start'>Lorem, ipsum dolor sit amet afase consectetur?</h3>
+                            <div className='w-full flex justify-between items-center mt-10'>
+                                <p className=''>10초전</p>
+                                <div className='flex gap-3 items-center'>
+                                    <div className='rounded-full bg-amber-600 w-10 h-10'></div>
+                                    <p>@lorem</p>
+                                </div>
+                            </div>
                         </div>
                     </SwiperSlide>
                 ))}
