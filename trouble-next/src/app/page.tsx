@@ -2,7 +2,7 @@ import Link from "next/link";
 import RecentPosts from "./_components/RecentPosts";
 import SearchBar from "./_components/SearchBar";
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="w-full h-screen flex flex-col items-center justify-center">
       {/* 타이틀 */}
