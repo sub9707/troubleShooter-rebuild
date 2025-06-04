@@ -27,7 +27,7 @@ export default function RootLayout({
           </div>
 
           {/* 메인 콘텐츠 */}
-          <div className="w-full max-w-[1440px] px-4 bg-gray-100 shadow-lg shadow-gray-600 relative z-10">
+          <div className="w-full h-screen max-w-[1440px] px-4 bg-gray-100 shadow-lg shadow-gray-600 relative z-10">
             {children}
           </div>
         </div>

@@ -344,7 +344,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                   key={post.id}
                   className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-200 cursor-pointer"
                 >
-                  <div className="flex items-center justify-between">
+                  <Link href={'/posting/1'} className="flex items-center justify-between">
                     <div className="flex-1 flex items-center space-x-4">
                       {/* 카테고리 태그 - 고정 너비 */}
                       <span className={`w-16 px-2 py-1 rounded-full text-xs font-medium text-center ${getCategoryColor(post.category)}`}>
@@ -386,7 +386,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -421,7 +421,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                   </a>
                 </nav>
               </div>
-              <Link href={'/posting'} className='flex justify-center items-center text-white bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer gap-2'>
+              <Link href={'/posting/write'} className='flex justify-center items-center text-white bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer gap-2'>
                 <Image src={Write} alt="follow-icon" className='invert w-5' />
                 글 추가
               </Link>
