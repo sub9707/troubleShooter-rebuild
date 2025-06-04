@@ -290,11 +290,11 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                   <input
                     type="search"
                     id="default-search"
-                    className="block w-full p-4 ps-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none"
+                    className="block w-full p-3 ps-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none"
                     placeholder="게시글 검색"
                     required
                   />
-                  <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer">검색</button>
+                  <button type="submit" className="text-white absolute end-2.5 top-1/2 -translate-y-1/2 bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer">검색</button>
                 </div>
               </form>
               <div>
@@ -367,12 +367,6 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                       <div className="flex items-center text-sm text-gray-500 space-x-3">
                         <span className="flex items-center">
                           <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                          </svg>
-                          {post.author}
-                        </span>
-                        <span className="flex items-center">
-                          <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                             <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
                           </svg>
@@ -427,10 +421,10 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                   </a>
                 </nav>
               </div>
-              <button className='flex justify-center items-center text-white bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer gap-2'>
+              <Link href={'/posting'} className='flex justify-center items-center text-white bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer gap-2'>
                 <Image src={Write} alt="follow-icon" className='invert w-5' />
                 글 추가
-              </button>
+              </Link>
             </div>
           </CardLayout>
         </div>
