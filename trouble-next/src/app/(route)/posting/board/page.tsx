@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Search, Eye, MessageCircle, Calendar, CheckCircle } from 'lucide-react';
+import { Search, Eye, MessageCircle, Calendar, CheckCircle, Home, ChevronRight } from 'lucide-react';
 
 // 타입 정의
 interface PopularPost {
@@ -194,6 +194,39 @@ const Page: React.FC = () => {
   return (
     <div className="h-screen overflow-y-scroll bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        {/* 페이지 헤더 */}
+        <div className="mb-8">
+          {/* 브레드크럼 */}
+          <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+            <Home className="w-4 h-4" />
+            <ChevronRight className="w-4 h-4" />
+            <span className="hover:text-indigo-600 cursor-pointer transition-colors duration-200">커뮤니티</span>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-gray-900 font-medium">게시글 목록</span>
+          </nav>
+          
+          {/* 페이지 타이틀 */}
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">게시글 목록</h1>
+              <p className="text-gray-600">다양한 주제의 게시글을 확인하고 소통해보세요</p>
+            </div>
+            
+            {/* 헤더 액션 버튼들 */}
+            <div className="flex items-center space-x-3">
+              <button className="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors duration-200">
+                필터
+              </button>
+              <button className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-sm">
+                글쓰기
+              </button>
+            </div>
+          </div>
+          
+          {/* 헤더 하단 구분선 */}
+          <div className="mt-6 h-px bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-20"></div>
+        </div>
         
         {/* 인기 게시글 섹션 */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 mb-8 p-6">
