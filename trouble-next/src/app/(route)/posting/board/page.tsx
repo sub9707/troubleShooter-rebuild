@@ -215,9 +215,6 @@ const Page: React.FC = () => {
             
             {/* 헤더 액션 버튼들 */}
             <div className="flex items-center space-x-3">
-              <button className="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors duration-200">
-                필터
-              </button>
               <button className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-sm">
                 글쓰기
               </button>
@@ -296,7 +293,7 @@ const Page: React.FC = () => {
               <input
                 type="text"
                 placeholder="게시글 검색..."
-                className="w-80 pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
+                className="w-150 pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
             </div>
