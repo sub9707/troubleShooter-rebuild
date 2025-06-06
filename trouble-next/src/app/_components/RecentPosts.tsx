@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {  Navigation, Autoplay } from 'swiper/modules';
+import Link from 'next/link';
 
 function RecentPosts() {
     return (
@@ -52,7 +53,7 @@ function RecentPosts() {
                                 <p className=''>10초전</p>
                                 <div className='flex gap-3 items-center'>
                                     <div className='rounded-full bg-amber-600 w-10 h-10'></div>
-                                    <p>@lorem</p>
+                                    <Link href={'/user/123'} className='hover:underline'>@lorem</Link>
                                 </div>
                             </div>
                         </div>
