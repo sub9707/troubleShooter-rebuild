@@ -27,7 +27,7 @@ export default function Page() {
         {/* 게시글 목록 버튼 */}
         <div className="flex justify-end px-20 mt-6">
           <Link
-            href="/posting/board"
+            href="/posting"
             className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-out"
           >
             <span>전체 게시글 확인</span>
