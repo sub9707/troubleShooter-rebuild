@@ -35,7 +35,7 @@ export default function RootLayout({
           </div>
 
           {/* 메인 콘텐츠 */}
-          <div className="w-full h-screen max-w-[1440px] px-4 bg-gradient-to-br from-indigo-50 via-white to-indigo-50 shadow-2xl shadow-indigo-900/40 relative z-10 border border-indigo-100">
+          <div className="w-full h-screen max-w-[1440px] px-4 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 shadow-2xl shadow-indigo-900/40 relative z-10 border border-indigo-100">
             {children}
           </div>
         </div>

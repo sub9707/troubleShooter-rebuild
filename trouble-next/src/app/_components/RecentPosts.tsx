@@ -7,8 +7,6 @@ import Link from 'next/link';
 function RecentPosts() {
     return (
         <div className="w-full relative py-6 px-20 mt-16">
-            <h2 className="text-2xl font-bold text-indigo-800 mb-8 text-center">최근 게시글</h2>
-
             {/* 왼쪽 네비게이션 버튼 */}
             <div className="swiper-button-prev-custom absolute left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white border-2 border-indigo-200 rounded-full shadow-lg flex items-center justify-center select-none cursor-pointer hover:bg-indigo-50 hover:border-indigo-300 transition-all duration-300 group">
                 <svg className="w-5 h-5 text-indigo-600 group-hover:text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
