@@ -85,11 +85,11 @@ const CommunityHub: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           
           {/* Q&A 카드 */}
-          <div className="group relative bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+          <div className="group relative bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
             {/* 배경 그라데이션 */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 opacity-50"></div>
             
-            <div className="relative p-8">
+            <div className="relative p-8 flex-grow">
               {/* 헤더 아이콘과 제목 */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
@@ -103,13 +103,12 @@ const CommunityHub: React.FC = () => {
                     <p className="text-sm text-blue-600 font-medium">Q&A Board</p>
                   </div>
                 </div>
-                <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300" />
               </div>
 
               {/* 설명 */}
               <p className="text-gray-600 mb-6 leading-relaxed">
                 개발 중 궁금한 점이나 문제가 있나요? 전문가들과 동료 개발자들에게 질문하고 
-                도움을 받을 수 있습니다. 함께 성장하는 개발 커뮤니티에 참여해보세요.
+                도움을 받을 수 있습니다.
               </p>
 
               {/* 특징 리스트 */}
@@ -146,13 +145,14 @@ const CommunityHub: React.FC = () => {
 
               {/* 액션 버튼 */}
               <div className="flex space-x-3">
-                <Link href={'/posting/quest/write'} className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium group-hover:shadow-lg">
+                <Link href={'/posting/board/write'} className="w-full flex justify-center items-center bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium group-hover:shadow-lg">
                   <HelpCircle className="w-4 h-4 inline mr-2" />
                   질문하러 가기
                 </Link>
-                <button className="px-4 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                <Link href={'/posting/board'} className="w-full flex justify-center items-center gap-2 px-4 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200 cursor-pointer">
                   <ExternalLink className="w-4 h-4" />
-                </button>
+                  게시판 이동
+                </Link>
               </div>
             </div>
 
@@ -161,11 +161,11 @@ const CommunityHub: React.FC = () => {
           </div>
 
           {/* 에러 노트 카드 */}
-          <div className="group relative bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+          <div className="group relative bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
             {/* 배경 그라데이션 */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-orange-100 opacity-50"></div>
             
-            <div className="relative p-8">
+            <div className="relative p-8 flex-grow">
               {/* 헤더 아이콘과 제목 */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
@@ -179,7 +179,6 @@ const CommunityHub: React.FC = () => {
                     <p className="text-sm text-red-600 font-medium">Error Notes</p>
                   </div>
                 </div>
-                <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition-all duration-300" />
               </div>
 
               {/* 설명 */}
@@ -222,13 +221,14 @@ const CommunityHub: React.FC = () => {
 
               {/* 액션 버튼 */}
               <div className="flex space-x-3">
-                <Link href={'/posting/board/write'}  className="flex-1 bg-red-600 text-white py-3 px-4 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium group-hover:shadow-lg">
+                <Link href={'/posting/quest/write'}  className="w-full flex justify-center items-center bg-red-600 text-white py-3 px-4 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium group-hover:shadow-lg">
                   <AlertTriangle className="w-4 h-4 inline mr-2" />
                   에러 기록하기
                 </Link>
-                <button className="px-4 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors duration-200">
+                <Link href={'/posting/quest'} className="w-full px-4 py-3 flex justify-center items-center gap-2 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors duration-200 cursor-pointer">
                   <ExternalLink className="w-4 h-4" />
-                </button>
+                  게시판 이동
+                </Link>
               </div>
             </div>
 

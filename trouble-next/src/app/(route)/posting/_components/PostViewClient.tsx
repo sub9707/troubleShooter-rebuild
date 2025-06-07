@@ -149,17 +149,17 @@ export default function PostViewClient({ slug }: PostViewClientProps) {
     return (
         <div className="w-full h-screen overflow-y-scroll bg-gradient-to-br from-slate-50 to-blue-50">
             {/* 헤더 */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-8 text-white">
+            <div className="max-w-6xl mx-auto px-4 py-8 p-8 text-indigo-800">
                 <div className="flex items-start justify-between">
                     <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-4">
                             {postData.isSolved && (
-                                <div className="flex items-center space-x-2 bg-green-500 px-3 py-1 rounded-full text-sm font-medium">
+                                <div className="flex text-white items-center space-x-2 bg-green-500 px-3 py-1 rounded-full text-sm font-medium">
                                     <CheckCircle2 className="w-4 h-4" />
                                     <span>해결완료</span>
                                 </div>
                             )}
-                            <div className="flex items-center space-x-2 text-indigo-200">
+                            <div className="flex items-center space-x-2 text-indigo-800">
                                 <User className="w-4 h-4" />
                                 <span className="text-sm">{postData.author}</span>
                             </div>
@@ -167,7 +167,7 @@ export default function PostViewClient({ slug }: PostViewClientProps) {
                         <h1 className="text-3xl font-bold mb-4 leading-tight">
                             {postData.title}
                         </h1>
-                        <div className="flex items-center space-x-6 text-indigo-200">
+                        <div className="flex items-center space-x-6 text-indigo-800">
                             <div className="flex items-center space-x-2">
                                 <Calendar className="w-4 h-4" />
                                 <span className="text-sm">{postData.timestamp}</span>
@@ -181,10 +181,10 @@ export default function PostViewClient({ slug }: PostViewClientProps) {
                 </div>
             </div>
 
-            <div className="bg-white shadow-lg">
+            <div className="max-w-6xl mx-auto px-4">
                 {/* 태그 섹션 */}
-                <div className="p-6 border-b border-gray-100">
-                    <div className="flex items-center space-x-2 mb-3">
+                <div className="flex gap-4 items-center px-6 border-b border-gray-100">
+                    <div className="flex items-center space-x-2">
                         <Tag className="w-5 h-5 text-indigo-600" />
                         <span className="font-semibold text-gray-800">태그</span>
                     </div>
@@ -207,7 +207,7 @@ export default function PostViewClient({ slug }: PostViewClientProps) {
                             const IconComponent = sectionIcons[key];
                             return (
                                 <div key={key} className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-                                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-4">
+                                    <div className="bg-gradient-to-r from-indigo-800 to-indigo-400 p-4">
                                         <div className="flex items-center space-x-3 text-white">
                                             <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
                                                 <IconComponent className="w-5 h-5" />

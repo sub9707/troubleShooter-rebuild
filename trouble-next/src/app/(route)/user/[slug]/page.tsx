@@ -344,7 +344,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                   key={post.id}
                   className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-200 cursor-pointer"
                 >
-                  <Link href={'/posting/1'} className="flex items-center justify-between">
+                  <Link href={'/posting/board/1'} className="flex items-center justify-between">
                     <div className="flex-1 flex items-center space-x-4">
                       {/* 카테고리 태그 - 고정 너비 */}
                       <span className={`w-16 px-2 py-1 rounded-full text-xs font-medium text-center ${getCategoryColor(post.category)}`}>
